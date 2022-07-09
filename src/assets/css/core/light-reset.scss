@@ -1,0 +1,175 @@
+/* 覆盖iview样式 */
+
+.l-iview-reset {
+
+	/* 按钮 */
+	.ivu-btn{
+		border-radius: 2px;
+	}
+	.ivu-btn-primary {
+		background-color: #397AFF;
+		border-color: #397AFF;
+	}
+	.ivu-btn-ghost.ivu-btn-primary {
+		color: #397AFF;
+		background-color: #ffffff;
+	}
+
+	/* 单选框 - 按钮组 */
+	.ivu-radio-group-button,
+	.ivu-radio-group-button.ivu-radio-group-small {
+		.ivu-radio-wrapper:first-child {
+			border-radius: 2px 0 0 2px;
+		}
+		.ivu-radio-wrapper:last-child {
+			border-radius: 0 2px 2px 0;
+		}	
+		.ivu-radio-wrapper-checked {
+			border-color: rgba(57, 122, 255, .2);
+			box-shadow: none;
+		}
+		.ivu-radio-wrapper-checked.ivu-radio-focus:first-child {
+			box-shadow: none;
+		}
+	}		
+	.ivu-radio-group-button-solid .ivu-radio-wrapper-checked:not(.ivu-radio-wrapper-disabled) {
+		background: rgba(57, 122, 255, .2);
+		color: #4384FF;
+		&:hover {
+			background: rgba(57, 122, 255, .2);
+			color: #4384FF;
+		}
+	}	
+
+	/* 输入框 */
+	.ivu-input {
+		border-radius: 2px;
+	}
+
+	/* 数字输入框 */
+	.ivu-input-number {
+		border-radius: 2px;
+	}
+	.ivu-input-number-handler-wrap {
+		border-radius: 0 2px 2px 0;
+	}
+
+	/* 下拉框 */
+	.ivu-select-selection {
+		border-radius: 2px;
+	}
+
+	/* 表格 */
+	.ivu-table-header table,
+	.ivu-table th {
+		background-color: #FAFAFC;
+		font-weight: bold;
+	}
+	td.ivu-table-expanded-cell {
+		padding: 0 50px;
+		background: #FAFAFC;
+	}
+
+	/* 分页 */
+	.ivu-page-item,
+	.ivu-page-item-jump-next, 
+	.ivu-page-item-jump-prev, 
+	.ivu-page-next, 
+	.ivu-page-prev,
+	.ivu-page-options-elevator input {
+		border-radius: 2px;
+	}
+
+	/* 弹框 */
+	.ivu-modal {
+		border-radius: 2px;
+	}
+
+	/* 修改滚动条样式 */
+	// 定义滚动条的轨道颜色、内阴影及圆角
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: none;
+		background-color: #ffffff;
+		border-radius: 0;
+	}
+	// 定义滑块颜色、内阴影及圆角
+	::-webkit-scrollbar-thumb {
+		border-radius: 6px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+		background-color: #397AFF;
+	}
+}
+
+.l-modal-container {
+	box-sizing: border-box;
+	background: #ffffff;
+	border-radius: 2px;
+	.l-modal-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 14px;
+		color: #333333;
+		line-height: 48px;
+		box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.08);
+		padding: 0 17px;
+		font-weight: bold;
+	}
+	.l-modal-content {
+		padding: 24px 48px 12px 24px;
+	}
+	.l-modal-footer {
+		padding: 12px 48px;
+		display: flex;
+		justify-content: flex-end;
+		border-top: 1px solid #e3e3e3;
+		.ivu-btn {
+			margin-left: 12px;
+		}
+	}
+}
+
+.l-scroll-main {
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #2E7DFC;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		/*对垂直流动条有效*/
+		height: 6px;
+		/*对水平流动条有效*/
+		// display: none;
+	}
+
+	/*定义滚动条的轨道颜色、内阴影及圆角*/
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+		background-color: transparent;
+		border-radius: 3px;
+	}
+
+	/*定义滑块颜色、内阴影及圆角*/
+	&::-webkit-scrollbar-thumb {
+		border-radius: 6px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+		background-color: #2E7DFC;
+	}
+}
+
+.form-select.ivu-select {
+	width: 200px;
+}
+/**
+ * 暂无数据
+ */
+.no-data {
+	width: 100%;
+	padding: 180px 0 0;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	color: #323233;
+	// background: url('../img/kong4.png') no-repeat center 40px;
+	background-size: 258px 139px;
+} 

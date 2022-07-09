@@ -1,0 +1,215 @@
+// vc-reset
+
+.ivu-table-header table {
+	background-color: #f8f8f9  !important;
+} 
+
+
+.g-iview-reset {
+
+	.ivu-tree-title,.ivu-tree-arrow {
+		color: white;
+	}
+	
+	ivu-tree-title-selected, .ivu-tree-title-selected:hover {
+		background-color: #093272;
+	}
+	.ivu-tree-title:hover {
+		background-color: #093272;
+
+	}
+	.ivu-btn.ivu-btn-primary {
+		background: linear-gradient(90deg, #31ABE3 0%, #44C2CB 100%) !important;
+		border: none;
+	}
+	.ivu-btn.__reset-btn {
+		background: linear-gradient(90deg, #054CB8 0%, #31ABE3 100%) !important;
+		border: none;
+		color: white;
+	}
+	.ivu-form-item {
+		margin-bottom: 12px;
+	}
+	div.ivu-form-item-error-tip {
+		position: static !important;
+		font-size: 12px !important;
+	}
+	.ivu-select-dropdown {
+		// background: #093272 !important;	
+		background-color: #0a469b !important;
+		z-index: 2;
+	
+	}
+	.ivu-select-item, .ivu-cascader-menu-item  {
+		// color: #cae0ff !important;
+		color: #808b79 !important;
+		&:hover {
+			background-color: #3db7ff !important;
+	
+		}
+	}
+	.ivu-dropdown-menu {
+	
+	}
+	.ivu-dropdown-item {
+	  color: white !important;
+	
+	  &:hover {
+		  color: #00f2fe !important;
+		  background-color: #173a8a !important;
+	  }
+	}
+	.ivu-cascader-menu {
+		border-right: 1px solid #20476f !important;
+	
+	}
+	.ivu-select-dropdown-list {
+		background-color: #0a469b;
+	}
+	.ivu-cascader-menu {
+		background-color: #173a8a !important;
+	
+	}
+	.ivu-cascader-menu-item-active {
+		background-color: #3db7ff !important;
+	
+	}
+	.ivu-cascader  {
+		background: #0a469b !important;
+	}
+	
+	.ivu-radio-group-item {
+		color: white;
+	}
+	
+	.ivu-form-item-label {
+		color: white  !important;
+	}
+	textarea.ivu-input {
+		background-color: #113F85 !important;
+		color: white;
+		border-color: #00D2FF !important;
+	
+	
+	}
+	.ivu-input-word-count {
+		background-color: #113F85 !important;
+		color: #00D2FF;
+	}
+	.ivu-input-default,.ivu-select-selection, .ivu-input-number-input, .ivu-input-number {
+		min-height: 38px  !important;
+		line-height: 38px  !important;
+		background-color: #113F85 !important;
+		border-color: #00D2FF !important;
+		color: white !important;
+		width: 100% !important;
+	}
+	.ivu-select-placeholder {
+		height: 38px  !important;
+		line-height: 38px  !important;
+	}
+	.ivu-table-body.ivu-table-overflowX, .ivu-table-tip,.ivu-select-dropdown,.ivu-cascader-menu {
+		scrollbar-width: thin;
+		scrollbar-color: #2A6EBC #10437e ;
+		&::-webkit-scrollbar {
+				width: 10px !important; /*对垂直流动条有效*/
+				height: 10px !important; /*对水平流动条有效*/
+				// display: none;
+			}
+			/*定义滚动条的轨道颜色、内阴影及圆角*/
+			&::-webkit-scrollbar-track{
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3) !important;
+				background-color: #10437e !important;
+				// border-radius: 3px;
+			}
+	
+			/*定义滑块颜色、内阴影及圆角*/
+			&::-webkit-scrollbar-thumb{
+				border-radius: 7px !important;
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3) !important;
+				background-color: #2A6EBC !important;
+			}
+	}
+	.__search .ivu-icon {
+		color: white  !important;
+		line-height: 38px  !important;
+	}
+	.ivu-select-selected-value {
+		line-height: 38px   !important;
+	}
+	.ivu-table th  {
+		background-color: #205BB4  !important;
+		font-size: 14px  !important;
+		color: white  !important;
+		// border-bottom: 1px solid #054CB8 !important;
+	}
+	.ivu-table td {
+		background-color: #063377  !important;
+		color: white  !important;
+	}
+	.ivu-table td, .ivu-table th {
+		border-bottom: 1px solid #054CB8  !important;
+	}
+	.ivu-table-stripe .ivu-table-body tr.ivu-table-row-hover td, 
+	.ivu-table-stripe .ivu-table-fixed-body tr.ivu-table-row-hover td,
+	.ivu-table-stripe .ivu-table-body tr:nth-child(2n) td, 
+	.ivu-table-stripe .ivu-table-fixed-body tr:nth-child(2n) td {
+		background-color: #063377  !important;
+	}
+	.ivu-table-row-hover td{
+		background-color: #4e6d9d  !important;
+
+	}
+	.ivu-table:before, .ivu-table-fixed-right::before, .ivu-table-fixed::before {
+		background-color: #063377  !important;
+	}
+	.ivu-table-body table {
+		background-color: #063377  !important;
+	}
+	.ivu-table-header table {
+		background-color: #205BB4  !important;
+	}
+	.ivu-date-picker-cells-cell {
+		color: rgb(92, 91, 91) !important;
+	}
+	.ivu-table-cell {
+
+	}
+	.ivu-table-cell-tree {
+		.ivu-icon.ivu-icon-ios-add, .ivu-icon.ivu-icon-ios-remove{
+			color: #063377  !important;
+			font-weight: bold  !important;
+		}
+	}
+}
+
+input[type=checkbox] {
+	width: 14px;
+	height: 14px;
+	margin-right: 6px;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 14px;
+		height: 14px;
+		border: 1px solid #44A9FF;
+	}
+	&:checked {
+		&::after {
+			content: "";
+			display: block;
+			width: 14px;
+			height: 14px;
+			// background-image: url("../../assets/img/login_selected.png");
+			background-size: 120% 120%;
+			background-position: center center;
+			border: 1px solid $main2;
+
+		}
+	}
+
+	// &~p {
+	// 	width: 288px;
+	// }
+}

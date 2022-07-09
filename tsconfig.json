@@ -1,0 +1,30 @@
+{
+	"compileOnSave": false,
+	"extends": "./tsconfig.extend.json",
+	"include": ["src/types/*", "src", "src/**/*"],
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"jsx": "react",
+		"outDir": "./dist/out-tsc",
+		"sourceMap": true,
+		"declaration": true,
+		"downlevelIteration": true,
+		"useDefineForClassFields": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "es2020",
+		"skipLibCheck": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false, // 未使用声明的值，true: 报错  false: 忽略
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		
+		"lib": [
+			"es2018",
+			"dom"
+		]
+	}
+}

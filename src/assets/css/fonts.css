@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "DIGITAL";
+    src: url('../fonts/DIGITAL-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "YouSheBiaoTiYuan";
+    src: url('../fonts/优设标题圆.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SiYuanHeiTi";
+    src: url('../fonts/SourceHanSansCN-Normal.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

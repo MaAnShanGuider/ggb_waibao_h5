@@ -1,0 +1,72 @@
+/* 覆盖antd样式 */
+
+.antd-reset {
+
+	.ant-picker,
+	.ant-select,
+	.ant-input-number,
+	.ant-input-number-group-wrapper {
+		width: 100%;
+	}
+
+	.ant-table-small .ant-table-thead > tr > th,
+	.ant-table-thead > tr > th {
+		background: #F5F7FD;
+		font-weight: bold;
+	}
+	.ant-table-tbody > tr.ant-table-row:hover > td, 
+	.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+		background: #ebf7ff;
+	}
+
+	// .ant-table-row-selected {
+	// 	box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+	// }
+
+	::-webkit-scrollbar {
+		background-color: #fff;
+	}
+	::-webkit-scrollbar-track {
+		box-shadow: none;
+	}
+}
+
+.table-search {
+	margin-bottom: 12px;
+	display: flex;
+	justify-content: space-between;
+
+	.search-btns {
+		display: flex;
+		>button {
+			margin-right: 12px;
+		}
+	}
+}
+
+/**
+ * 暂无数据
+ */
+.no-data {
+	width: 100%;
+	padding: 150px 0 0;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	color: #333333;
+	background: url('../../images/zanwu.png') no-repeat center 65px;
+	background-size: 75px 77px;
+}
+/**
+ * 暂无数据
+ */
+.no-data-dark {
+	width: 100%;
+	padding: 150px 0 0;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	color: #D2D2D2;
+	background: url('../../images/default/no-data.png') no-repeat center 40px;
+	background-size: 117px 83px;
+}

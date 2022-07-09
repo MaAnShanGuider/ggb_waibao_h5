@@ -1,0 +1,38 @@
+
+@mixin ease-motion($className, $keyframeName) {
+    @include make-motion($className, $keyframeName);
+    .#{$className}-enter-active, .#{$className}-appear, .#{$className}-level-to  {
+        opacity: 0;
+        transform: scale(0.01);
+        animation-timing-function: ease-in-out;
+        animation-duration: $transition-time;
+    }
+    .#{$className}-leave-active {
+        animation-timing-function: ease-in-out;
+        animation-duration: $transition-time;
+    }
+}
+
+@include ease-motion(xm-scale, xmScale);
+
+@keyframes xmScaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.01);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes xmScaleOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.01);
+    }
+}

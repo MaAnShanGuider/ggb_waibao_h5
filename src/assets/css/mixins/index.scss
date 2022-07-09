@@ -1,0 +1,278 @@
+@mixin btn($width, $height, $fontSize, $color, $borderRaduis) {
+	@if $width == auto {
+		width: auto;
+		min-width: 80px;
+		padding-left: 15px;
+		padding-right: 15px;
+	} @else {
+		width: $width;
+	}
+	height: $height;
+	line-height: $height;
+	color: $color;
+	font-size: $fontSize;
+	text-align: center;
+	@if $borderRaduis != '' {
+		border-radius: $borderRaduis;
+	}
+}
+@mixin btnPseudo($activeBg, $disabledBg, $disabledColor) {
+	&:active {
+		background-color: $activeBg;
+	}
+	&:disabled {
+		background-color: $disabledBg;
+		@if $disabledColor != '' {
+			color: $disabledColor;
+		}
+	}
+}
+@mixin fullBtn($bg, $activeBg, $disabledBg) {
+	@include btn(100%, 48px, 16px, $white, '');
+	@include btnPseudo($activeBg, $disabledBg, '');
+	background-color: $bg;
+}
+@mixin largeBtn($bg, $activeBg, $disabledBg, $color, $disabledColor, $border) {
+	@include btn(80%, 48px, 16px, $color, 24px);
+	@include btnPseudo($activeBg, $disabledBg, $disabledColor);
+	@if $border != '' {
+		border: $border;
+	}
+	background-color: $bg;
+}
+@mixin meduimBtn($bg, $activeBg, $disabledBg, $color, $disabledColor, $border) {
+	@include btn(45%, 36px, 14px, $color, 18px);
+	@include btnPseudo($activeBg, $disabledBg, $disabledColor);
+	@if $border != '' {
+		border: $border;
+	}
+	background-color: $bg;
+}
+@mixin smallBtn($bg, $activeBg, $disabledBg, $color, $disabledColor, $border) {
+	@include btn(auto, 28px, 12px, $color, 14px);
+	@include btnPseudo($activeBg, $disabledBg, $disabledColor);
+	@if $border != '' {
+		border: $border;
+	}
+	background-color: $bg;
+}
+@mixin smallerBtn(
+	$bg,
+	$activeBg,
+	$disabledBg,
+	$color,
+	$disabledColor,
+	$border
+) {
+	@include btn(60px, 24px, 12px, $color, 12px);
+	@include btnPseudo($activeBg, $disabledBg, $disabledColor);
+	@if $border != '' {
+		border: $border;
+	}
+	background-color: $bg;
+}
+@mixin rectangleBtn(
+	$bg,
+	$activeBg,
+	$disabledBg,
+	$color,
+	$disabledColor,
+	$border
+) {
+	@include btn(auto, 32px, 14px, $color, 2px);
+	@include btnPseudo($activeBg, $disabledBg, $disabledColor);
+	@if $border != '' {
+		border: $border;
+	}
+	background-color: $bg;
+}
+
+@mixin lineGradient($startColor, $endColor) {
+	$lists: ();
+	$precent: 0%;
+	$j: 0;
+	@while ($j < 100) {
+		$lists: join(
+			$lists,
+			(
+				(
+					rgba($startColor, 1) $precent + $j,
+					rgba($startColor, 1) $precent + $j + 5,
+					rgba($endColor, 1 - $j * 0.005) $precent + $j + 5,
+					rgba($endColor, 1 - $j * 0.005) $precent + $j + 10
+				)
+			),
+			comma
+		);
+		$j: $j + 10;
+	}
+	background: linear-gradient(to right, $lists);
+}
+@mixin mainBtn($startColor, $endColor) {
+	background: linear-gradient(169deg, $startColor 0%, $endColor 100%);
+	box-shadow: 0px .01rem .01rem 0px rgba(0, 0, 0, 0.08);
+	border-radius: .15rem;
+	padding: 0 .20rem;
+	line-height: .25rem;
+	color: white;
+	display: inline-block;
+	font-size: .14rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	font-weight: 700;
+
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: .22rem;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	z-index: auto;
+	// 	height: .10rem;
+	// 	-webkit-filter: blur(.10rem);
+	// 	-moz-filter: blur(.10rem);
+	// 	-ms-filter: blur(.10rem);
+	// 	background: linear-gradient(169deg, $startColor 0%, $endColor 100%);
+	// 	filter: blur(.10rem);
+	// }
+}
+@mixin mainBtnSmall($startColor, $endColor) {
+
+	background: #424242 linear-gradient(308deg, $startColor 0%, $endColor 46%, $startColor 100%);
+	box-shadow: 0px .01rem .01rem 0px rgba(0, 0, 0, 0.08);
+	border-radius: .15875rem;
+	line-height: .3175rem;
+	width: .80rem;
+	color: white;
+	display: inline-block;
+	font-size: .14rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	font-weight: 700;
+	text-align: center;
+
+	// background: linear-gradient(169deg, $startColor 0%, $endColor 100%);
+	// box-shadow: 0px .01rem .01rem 0px rgba(0, 0, 0, 0.08);
+	// border-radius: .15875rem;
+	// line-height: .3175rem;
+	// width: .80rem;
+	// color: white;
+	// display: inline-block;
+	// font-size: .12rem;
+	// position: relative;
+	// top: 0;
+	// left: 0;
+	// font-weight: 700;
+	// text-align: center;
+
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: .24rem;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	z-index: auto;
+	// 	height: .09rem;
+	// 	-webkit-filter: blur(.09rem);
+	// 	-moz-filter: blur(.09rem);
+	// 	-ms-filter: blur(.09rem);
+	// 	background: linear-gradient(169deg, $startColor 0%, $endColor 100%);
+	// 	filter: blur(.09rem);
+	// 	opacity: .8;
+
+	// }
+}
+@mixin mainBtnMedium($startColor, $endColor) {
+	background: linear-gradient(169deg, $startColor 0%, $endColor 100%);
+	box-shadow: 0px .01rem .01rem 0px rgba(0, 0, 0, 0.08);
+	border-radius: .20rem;
+	line-height: .40rem;
+	width: 1.735rem;
+	color: white;
+	display: inline-block;
+	font-size: .15rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	font-weight: 700;
+	text-align: center;
+
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: .30rem;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	z-index: 0;
+	// 	height: .20rem;
+	// 	-webkit-filter: blur(.12rem);
+	// 	-moz-filter: blur(.12rem);
+	// 	-ms-filter: blur(.19rem);
+	// 	background: linear-gradient(169deg, $startColor 0%, $endColor 100%);
+	// 	filter: blur(.12rem);
+	// 	opacity: .8;
+
+	// }
+}
+@mixin mainLargeBtnYellow() {
+
+
+	background: linear-gradient(308deg, #FFE3C3 0%, #D1A863 46%, #FFE3C3 100%);
+	box-shadow: 0px .01rem .01rem 0px rgba(0, 0, 0, 0.08);
+	border-radius: .235rem;
+	line-height: .47rem;
+	color: white;
+	display: block;
+	font-size: .16rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	font-weight: 700;
+	width: 3.43rem;
+	margin: 0 auto;
+	text-align: center;
+}
+@mixin mainLargeBtn($startColor, $endColor) {
+	background: linear-gradient(169deg, $startColor 0%, $endColor 100%);
+	box-shadow: 0px .01rem .01rem 0px rgba(0, 0, 0, 0.08);
+	border-radius: .235rem;
+	line-height: .47rem;
+	color: white;
+	display: block;
+	font-size: .16rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	font-weight: 700;
+	width: 3.43rem;
+	margin: 0 auto;
+	text-align: center;
+
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: .42rem;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	z-index: auto;
+	// 	height:.10rem;
+	// 	-webkit-filter: blur(.10rem);
+	// 	-moz-filter: blur(.10rem);
+	// 	-ms-filter: blur(.10rem);
+	// 	background: linear-gradient(169deg, $startColor 0%, $endColor 100%);
+	// 	filter: blur(.10rem);
+	// 	opacity: .8;
+	// }
+}
+@mixin mainDefaultBtn () {
+	width: .80rem;
+	box-sizing: border-box;
+	border: .005rem solid $c99;
+	border-radius: .16rem ;
+	line-height: .3rem;
+	font-size: .14rem;
+	color: $c99;
+	text-align: center;
+}

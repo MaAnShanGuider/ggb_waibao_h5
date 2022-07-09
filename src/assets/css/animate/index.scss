@@ -1,0 +1,32 @@
+.g-opacity-show {
+	opacity: 1 !important;
+	transition: opacity 0.3s;
+}
+$animation-time: .1s;
+$transition-time: .1s;
+@mixin motion-common($time) {
+    animation-duration: $time;
+    animation-fill-mode: both;
+}
+
+@mixin make-motion($className, $keyframeName, $time: $animation-time) {
+
+    .#{$className}-enter-active, .#{$className}-appear {
+        @include motion-common($time);
+        animation-play-state: paused;
+    }
+    .#{$className}-leave-active {
+        @include motion-common($time);
+        animation-play-state: paused;
+    }
+    .#{$className}-enter-active, .#{$className}-appear {
+        animation-name: "#{$keyframeName}In";
+        animation-play-state: running;
+    }
+    .#{$className}-leave-active {
+        animation-name: "#{$keyframeName}Out";
+        animation-play-state: running;
+    }
+}
+@import "./ease.scss";
+@import "./scale.scss";

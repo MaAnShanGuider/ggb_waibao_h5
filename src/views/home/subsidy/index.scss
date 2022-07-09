@@ -1,0 +1,98 @@
+.v-home-subsidy{
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	padding: 16px ;
+	.seachBox{
+		display: flex;
+		justify-content: space-between;
+	}
+	.boxIndex{
+		position: relative;
+		>.textbox{
+			position: absolute;
+			top: -17px;
+			left: -12px;
+			font-size: 30px;
+			color: #23BCCA;
+			text-align: left;
+			// .text{
+			// 	width: 0;
+			// 	height: 0;
+			// 	border-top: 30px solid #23BCCA;f
+			// 	border-right: 30px solid transparent;
+			// 	margin-top: -22px;
+			// }
+		}
+	}
+	.rightBox{
+		padding: 8px;
+		flex: auto;
+		background: #fff;
+		border-radius: 0 4px 4px 0;
+	}
+	.leftBox{
+		width: 120px;
+		height: 100%;
+		background: #fff;
+		border-radius: 4px 0 0 4px;
+		margin-right: 2px;
+		flex-shrink: 0;
+		.title{
+			padding: 10px 0;
+			// height: 60px;
+			font-size: 14px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #333333;
+			font-weight: bold;
+			border-bottom: 1px solid #f0f0f0;
+			margin-bottom: 10px;
+		}
+
+		.activeTime{
+			.timeT{
+				color: #0C70F8;
+				border-radius: 2px;
+			}
+			
+		}
+
+		.timelist{
+			height: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 7px;
+			font-size: 12px;
+		}
+
+		.actimeBox{
+			background: #E6F4FF;
+		}
+		.timeT{
+			display: inline-block;
+			margin-left: 4px;
+			margin-bottom: 7px;
+			font-weight: 500;
+		}
+		.acitve{
+			background: #E6F4FF;
+			border-radius: 2px;
+		}
+		.timeList{
+			height: 24px;
+			cursor: pointer;
+			// text-align: center;
+			>div{
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+			}
+			// background: #EBEEF4;
+		}
+	}
+}
